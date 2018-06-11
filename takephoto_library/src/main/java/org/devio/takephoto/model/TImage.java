@@ -44,7 +44,11 @@ public class TImage implements Serializable {
     }
 
     public String getCompressPath() {
-        return compressPath;
+        if (compressed) {
+            return compressPath;
+        } else {
+            return originalPath;
+        }
     }
 
     public void setCompressPath(String compressPath) {
